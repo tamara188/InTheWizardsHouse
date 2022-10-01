@@ -4,15 +4,32 @@ using UnityEngine;
 
 public class movement : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
+    public GameObject cam;
+    public GameObject player;
+    public int speed;
+    public int leftBound;
+    public int rightBound;
     // Update is called once per frame
     void Update()
     {
-        Debug.Log("Hello");
+        Debug.Log(transform.position[0]);
+        if (Input.GetKey(KeyCode.A))
+        {
+            if(transform.position[0] > leftBound)
+            {
+                transform.position += Vector3.left * speed * Time.deltaTime;
+                cam.transform.position += Vector3.left * speed * Time.deltaTime;
+            }
+            
+        }
+        if (Input.GetKey(KeyCode.D))
+        {
+            if(transform.position[0] < rightBound)
+            {
+                transform.position += Vector3.right * speed * Time.deltaTime;
+                cam.transform.position += Vector3.right * speed * Time.deltaTime;
+            }
+
+        }
     }
 }
