@@ -12,7 +12,6 @@ public class movement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Debug.Log(transform.position[0]);
         if (Input.GetKey(KeyCode.A))
         {
             if(transform.position[0] > leftBound)

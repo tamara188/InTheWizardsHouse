@@ -23,13 +23,14 @@ public class ClueManager : MonoBehaviour
     {
 
         timer += Time.deltaTime;
-        if(timer % 10 == 0)
+        Debug.Log(timer);
+        if((int)timer % 10 == 0)
         {
-            currentTime = timer;
-            int randy = (int)Random.Range(0f, allClues.Length+1);
+            currentTime = (int)timer;
+            //int randy = (int)Random.Range(0f, allClues.Length+1);
             clueSprite.sprite = active;
         }
-        if(timer == currentTime + 2)
+        if((int)timer == currentTime + 2)
         {
             clueSprite.sprite = inactive;
         }
