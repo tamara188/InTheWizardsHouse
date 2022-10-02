@@ -7,7 +7,7 @@ public class sceneManager : MonoBehaviour
 {
      int n;
    public void OnButtonPress(){
-      SceneManager.LoadScene (sceneName:"playArea");
+      SceneManager.LoadScene (sceneName:"cutScene");
    }
    public void openCredits(){
     Debug.Log("todo, make the credtis and github link show up");
