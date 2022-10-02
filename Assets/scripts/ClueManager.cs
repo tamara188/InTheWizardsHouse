@@ -1,6 +1,6 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class ClueManager : MonoBehaviour
 {
@@ -85,6 +85,7 @@ public class ClueManager : MonoBehaviour
         }
         if(score == spriteRenderers.Length){
             Debug.Log("you Won!");
+            SceneManager.LoadScene (sceneName:"cutScene");
         }
 
     }

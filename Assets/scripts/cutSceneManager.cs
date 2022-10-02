@@ -7,10 +7,10 @@ public class cutSceneManager : MonoBehaviour
 {
     // Start is called before the first frame update
     private string[] textCont;
-    private int textNum = 0;
+    private static int textNum = 0;
     public Text txt;
     void Start(){
-        string [] t = {"hello wizard","hello ghost hunter.","shall we go on to the game?","sure thing"};
+        string [] t = {"hello wizard","hello ghost hunter.","shall we go on to the game?","sure thing","this text shows after the game."};
         textCont = t;
         txt.text = textCont[textNum];
     }
