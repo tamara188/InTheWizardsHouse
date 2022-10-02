@@ -348,8 +348,9 @@ GameObject:
   - component: {fileID: 421599093}
   - component: {fileID: 421599092}
   - component: {fileID: 421599091}
+  - component: {fileID: 421599094}
   m_Layer: 0
-  m_Name: PAPlayer
+  m_Name: FAPlayer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -372,6 +373,7 @@ MonoBehaviour:
   speed: 10
   leftBound: -27
   rightBound: 19
+  anim: {fileID: 421599094}
 --- !u!212 &421599092
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -411,7 +413,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 2
-  m_Sprite: {fileID: 21300000, guid: 59d332ede796344499035256bea7a5aa, type: 3}
+  m_Sprite: {fileID: -3216241383245478344, guid: 06cfbdd1b58bba94fad4c6b870bb9ac8,
+    type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -430,12 +433,31 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 421599090}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.022467852, y: -1.42, z: 0}
+  m_LocalPosition: {x: -0.022467852, y: -2.02, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &421599094
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 421599090}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 526221edf40ffa5478c654c435eb601e, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &487338321
 GameObject:
   m_ObjectHideFlags: 0
