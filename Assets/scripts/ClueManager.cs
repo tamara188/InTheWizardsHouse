@@ -6,14 +6,15 @@ public class ClueManager : MonoBehaviour
 {
     public GameObject metronome;
     private float timer = 0f;
-    GameObject[] allClues = GameObject.FindGameObjectsWithTag("Clue");
+    GameObject[] allClues;
     public SpriteRenderer clueSprite;
     public Sprite active;
     public Sprite inactive;
+    private int numActiveItems;
     // Start is called before the first frame update
     void Start()
     {
-        
+        allClues = GameObject.FindGameObjectsWithTag("Clue");
 
     }
 
@@ -23,7 +24,6 @@ public class ClueManager : MonoBehaviour
     {
 
         timer += Time.deltaTime;
-        Debug.Log(timer);
         if((int)timer % 10 == 0)
         {
             currentTime = (int)timer;
