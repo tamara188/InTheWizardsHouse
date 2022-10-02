@@ -7,8 +7,9 @@ public class sceneManager : MonoBehaviour
 {
      int n;
    public void OnButtonPress(){
-      n++;
-      Debug.Log("Button clicked " + n + " times.");
       SceneManager.LoadScene (sceneName:"playArea");
+   }
+   public void openCredits(){
+    Debug.Log("todo, make the credtis and github link show up");
    }
 }

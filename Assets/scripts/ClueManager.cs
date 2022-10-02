@@ -7,19 +7,33 @@ public class ClueManager : MonoBehaviour
     public GameObject metronome;
     private float timer = 0f;
     GameObject[] allClues;
-    public SpriteRenderer clueSprite;
-    public Sprite active;
-    public Sprite inactive;
+
+
+    public (Sprite,Sprite)[] sprites;
+    public SpriteRenderer[] spriteRenderers;
+
+    // all clue sprites
+    public Sprite clueOneActive;
+    public Sprite clueOneInactive;
+    public Sprite clueTwoActive;
+    public Sprite clueTwoInactive;
+    //all clue sprite renderers
+    public SpriteRenderer clueOne;
+    public SpriteRenderer clueTwo;
     private int numActiveItems;
     // Start is called before the first frame update
     void Start()
     {
         allClues = GameObject.FindGameObjectsWithTag("Clue");
-
+        populateSprites();
     }
-
+    void populateSprites(){
+        sprites = new [] {(clueOneActive,clueOneInactive),(clueTwoActive,clueTwoInactive)};
+        spriteRenderers = new [] {clueOne,clueTwo};
+    }
     // Update is called once per frame
     float currentTime = 0f;
+    int randy;
     void Update()
     {
 
@@ -27,12 +41,14 @@ public class ClueManager : MonoBehaviour
         if((int)timer % 10 == 0)
         {
             currentTime = (int)timer;
-            //int randy = (int)Random.Range(0f, allClues.Length+1);
-            clueSprite.sprite = active;
+            randy = (int)Random.Range(0f, spriteRenderers.Length);
+            spriteRenderers[randy].sprite = sprites[randy].Item2;
+            //clueSprite.sprite = active;
         }
         if((int)timer == currentTime + 2)
         {
-            clueSprite.sprite = inactive;
+            spriteRenderers[randy].sprite = sprites[randy].Item1;
+            //clueSprite.sprite = inactive;
         }
 
     }

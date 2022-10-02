@@ -699,7 +699,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Ghost In The Wizards House
+  m_Text: Ghost In The Wizard's House
 --- !u!222 &937694932
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -872,7 +872,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1773936311}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 471887858}
+        m_MethodName: openCredits
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1773936311
 MonoBehaviour:
   m_ObjectHideFlags: 0
